@@ -1,33 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cecil's Rose Problem Visual</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecil's Rose Problem Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #6a2c91;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .rose-visualization {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .legend {
+            background-color: #e8e8e8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #d9f7f1;
+            border-left: 5px solid #67c3c4;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cecil's Rose Problem Visual</h1>
-    <p>This is an interactive visual representation of Cecil's Rose Problem.</p>
-    <canvas id="roseCanvas" width="600" height="600"></canvas>
-    <script>
-        // JavaScript code to create the rose visual
-        const canvas = document.getElementById('roseCanvas');
-        const ctx = canvas.getContext('2d');
-
-        function drawRose(k) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.moveTo(300, 300);
-
-            for (let theta = 0; theta < 2 * Math.PI; theta += 0.01) {
-                const r = 200 * Math.sin(k * theta);
-                const x = 300 + r * Math.cos(theta);
-                const y = 300 + r * Math.sin(theta);
-                ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.stroke();
-        }
-
-        drawRose(6);  // Example with k=6
-    </script>
+    <div class="container">
+        <h1>Cecil's Rose Problem</h1>
+        <div class="rose-visualization">
+            <!-- Visualization of Roses would go here -->
+            <img src="path_to_visualization_image.png" alt="Rose Visualization" />
+        </div>
+        <div class="legend">
+            <h2>Legend</h2>
+            <p>Description of various elements in the visualization.</p>
+        </div>
+        <div class="solution">
+            <h2>Step-by-Step Solution</h2>
+            <div class="step">
+                <h3>Step 1</h3>
+                <p>Explanation of Step 1.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2</h3>
+                <p>Explanation of Step 2.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3</h3>
+                <p>Explanation of Step 3.</p>
+            </div>
+            <!-- Additional steps as necessary -->
+        </div>
+        <div class="answer">
+            <h2>Final Answer</h2>
+            <p>The final result for Cecil's Rose Problem is: [Final Answer]</p>
+        </div>
+    </div>
 </body>
 </html>
