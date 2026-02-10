@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cecil's Rose Problem Visual</title>
+</head>
+<body>
+    <h1>Cecil's Rose Problem Visual</h1>
+    <p>This is an interactive visual representation of Cecil's Rose Problem.</p>
+    <canvas id="roseCanvas" width="600" height="600"></canvas>
+    <script>
+        // JavaScript code to create the rose visual
+        const canvas = document.getElementById('roseCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawRose(k) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(300, 300);
+
+            for (let theta = 0; theta < 2 * Math.PI; theta += 0.01) {
+                const r = 200 * Math.sin(k * theta);
+                const x = 300 + r * Math.cos(theta);
+                const y = 300 + r * Math.sin(theta);
+                ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        drawRose(6);  // Example with k=6
+    </script>
+</body>
+</html>
